@@ -1,5 +1,5 @@
+var Set = require('../');
 var assert = require('assert');
-var Set = require('../index');
 
 describe('static functions', function(){
 	
