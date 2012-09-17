@@ -1,0 +1,4 @@
+--reporter spec
+--require should
+--slow 20
+--growl

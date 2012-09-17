@@ -1,0 +1,24 @@
+{
+  "name": "set-operations",
+  "description": "Set operations",
+  "version": "0.1.0",
+  "author": "David Brockman Smoliansky",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "dox": "*"
+  },
+  "keywords": ["set", "union", "intersection"],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/dbrockman/node-set-operations.git"
+  },
+  "main": "index",
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  }
+}
