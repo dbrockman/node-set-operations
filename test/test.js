@@ -220,6 +220,67 @@ describe('static functions', function(){
 		});
 	});
 
+	describe('isSubsetOf()', function(){
+		it('should return true if A is empty', function(){
+			var a = Set.create();
+			var b = Set.fromArray(['a', 'b', 'c']);
+			assert.strictEqual(true, Set.isSubsetOf(a, b));
+		});
+		it('should return true if A is empty, even if B is empty', function(){
+			var a = Set.create();
+			var b = Set.create();
+			assert.strictEqual(true, Set.isSubsetOf(a, b));
+		});
+		it('should return true if the sets are equal', function(){
+			var a = Set.fromArray(['a', 'b', 'c']);
+			var b = Set.fromArray(['c', 'a', 'b']);
+			assert.strictEqual(true, Set.isSubsetOf(a, b));
+		});
+		it('should return false if A is larger', function(){
+			var a = Set.fromArray(['a', 'b', 'c', 'd']);
+			var b = Set.fromArray(['a', 'b', 'c']);
+			assert.strictEqual(false, Set.isSubsetOf(a, b));
+		});
+		it('should return false if A contains an elements not found in B', function(){
+			var a = Set.fromArray(['x']);
+			var b = Set.fromArray(['a', 'b', 'c']);
+			assert.strictEqual(false, Set.isSubsetOf(a, b));
+		});
+	});
+
+	describe('isProperSubsetOf()', function(){
+		it('should return true if A is empty', function(){
+			var a = Set.create();
+			var b = Set.fromArray(['a', 'b', 'c']);
+			assert.strictEqual(true, Set.isProperSubsetOf(a, b));
+		});
+		it('should return true if A contains some of the elements in B but not all', function(){
+			var a = Set.fromArray(['a', 'b']);
+			var b = Set.fromArray(['a', 'b', 'c']);
+			assert.strictEqual(true, Set.isProperSubsetOf(a, b));
+		});
+		it('should return false if both A and B is empty', function(){
+			var a = Set.create();
+			var b = Set.create();
+			assert.strictEqual(false, Set.isProperSubsetOf(a, b));
+		});
+		it('should return false if the sets are equal', function(){
+			var a = Set.fromArray(['a', 'b', 'c']);
+			var b = Set.fromArray(['c', 'a', 'b']);
+			assert.strictEqual(false, Set.isProperSubsetOf(a, b));
+		});
+		it('should return false if A is larger', function(){
+			var a = Set.fromArray(['a', 'b', 'c', 'd']);
+			var b = Set.fromArray(['a', 'b', 'c']);
+			assert.strictEqual(false, Set.isProperSubsetOf(a, b));
+		});
+		it('should return false if A contains an elements not found in B', function(){
+			var a = Set.fromArray(['x']);
+			var b = Set.fromArray(['a', 'b', 'c']);
+			assert.strictEqual(false, Set.isProperSubsetOf(a, b));
+		});
+	});
+
 });
 
 
