@@ -5,11 +5,9 @@
   "author": "David Brockman Smoliansky",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "*",
-    "should": "*",
-    "dox": "*"
+    "mocha": "*"
   },
-  "keywords": ["set", "union", "intersection"],
+  "keywords": ["set", "union", "intersection", "superset", "subset"],
   "repository": {
     "type": "git",
     "url": "http://github.com/dbrockman/node-set-operations.git"
