@@ -8,3 +8,6 @@ Functions that treat objects like sets.
 - isProperSubsetOf
 - isSupersetOf
 - isProperSupersetOf
+
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/dbrockman/node-set-operations.svg)](https://greenkeeper.io/)
