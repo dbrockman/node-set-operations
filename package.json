@@ -7,7 +7,13 @@
   "devDependencies": {
     "mocha": "*"
   },
-  "keywords": ["set", "union", "intersection", "superset", "subset"],
+  "keywords": [
+    "set",
+    "union",
+    "intersection",
+    "superset",
+    "subset"
+  ],
   "repository": {
     "type": "git",
     "url": "http://github.com/dbrockman/node-set-operations.git"
